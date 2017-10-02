@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 13: The Document Object Model</title>
+	<style>
+  		/* Defines a cleaner look for tables */
+  		table  { border-collapse: collapse; }
+  		td, th { border: 1px solid black; padding: 3px 8px; }
+  		th     { text-align: left; }
+	</style>
+</head>
+<body>
+	<a href="../Chapter12/index.html">Previous Chapter</a>
+	<a href="../Chapter14/index.html">Next Chapter</a>
+
+	<a href="http://eloquentjavascript.net/">Here is the page for the Eloquent JavaScript textbook</a>
+	
+	<h2 id="gertrude">My ostrich Gertrude:</h2>
+
+
+	<button id="append" type="button" onclick="appendAnElement()">Append</button>
+	<div id="container">
+		<div>Div 1</div>
+		<div>Div 2</div>
+		<div>Div 3</div>
+		<div>Div 4</div>
+	</div>
+
+
+	<button id="remove" onclick="removeAnElement()">Remove</button>
+
+
+	<div id="colorMe" style="height: 200px;"></div>
+	<button id="color" onclick="styleAnElement()">Fill The Div</button>
+
+	<div>
+		<p id="countP">Number of paragraph elements on the page: </p>
+		<button id="numParagraphs" onclick="paragraphQuerySelector()">How Many?</button>
+	</div>
+
+	<div>
+		<p id="countA">Number of link(a) elements on the page: </p>
+		<button id="numLinks" onclick="linkQuerySelector()">How Many?</button>
+	</div>
+
+	<hr>
+	<div id="exerOne">
+		<h2>Exercise One</h2>
+		<br>
+		<button id="createATable" onclick="exerciseOne()">Build Table</button>
+	</div>
+	<hr>
+	<div id="exerDivOne">
+		<p>I'm a paragraph</p>
+		<p>Me Too</p>
+		<p>Same</p>
+		<p id="lastP">Me Too.  That Makes How Many Paragraphs? </p>
+
+		<button id="pInD" onclick="byTagNameDivOne()">Count p In This d</button>
+	</div>
+
+	<div id="exerDivTwo">
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<p id="twoLastP">How many hr in this div? </p>
+		<button id="pInD" onclick="byTagNameDivTwo()">Count p In This d</button>
+	</div>
+
+	<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
