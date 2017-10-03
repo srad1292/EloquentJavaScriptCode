@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 14: Handling Events</title>
+	<style>
+		div {border: 1px solid black;}
+		#whatKeyPressed {font-size: 4rem;}
+	</style>
+</head>
+<body>
+	<a href="../Chapter13/index.html">Previous Chapter</a>
+	<a href="../Chapter15/index.html">Next Chapter</a>
+
+	<div>
+		<p onclick="firstEvent()">Click this element to activate the handler</p>
+	</div>
+
+	<div>
+		<button onmousedown="whichButtonPressed()">Press Me!</button>
+		<p id = "whichMouseButton">You Pressed The: </p>
+	</div>
+	
+	<div>
+		<p onmousedown="pPropagate()">
+			Here's a paragraph with a button.
+			left click to stop propagation, middle click to
+			allow the p to fire too.
+			<button onmousedown="buttonInPara()">Click Me!</button>
+		</p>
+	</div>
+	<p>Press the v key to turn the below div to violet</p>
+	<div style="height:200px" id="divColor">
+		
+	</div>
+	<p>Press a key and the div will show what key you pressed and it's charCode
+	<div>
+		<p id="whatKeyPressed"></p>
+	</div>
+
+	<p>Drag the div to make it wider or narrower</p>
+	<div style="height:100px">
+		<div id="draggableDiv" style="background: orange; width: 100px; height:99px" onmousedown="dragDiv()">
+		
+		</div>
+	</div>
+	
+	<button onclick="timedColor()">Timed Div Color Change</button>
+	<div id="divToColor" style="height:100px">
+		
+	</div>
+
+	<div>
+		<button onclick="bombTimer()">Will you defuse the bomb</button>
+		<p id="bombStatus">Bomb Status: Ready</p>
+	</div>
+	<div></div>
+
+
+	<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
